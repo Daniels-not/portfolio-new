@@ -5,14 +5,17 @@ import CodeRain from "./CodeRain";
 import FloatingTech from "./FloatingTech";
 import GridBackground from "./GridBackground";
 
-export default function Hero() {
+const scrollTo = (id) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
 
+export default function Hero() {
   return (
     <section
       id="home"
       className="relative h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-
       <GridBackground />
       <CodeRain />
       <FloatingTech />
@@ -34,7 +37,6 @@ export default function Hero() {
           transition={{ delay: 0.6 }}
           className="mt-6 text-xl md:text-2xl text-gray-300 font-mono"
         >
-
           <Typewriter
             options={{
               strings: [
@@ -43,15 +45,14 @@ export default function Hero() {
                 "Backend Developer",
                 "AI Application Builder",
                 "React & Node.js Developer",
-                "Problem Solver Through Code"
+                "Problem Solver Through Code",
               ],
               autoStart: true,
               loop: true,
               delay: 50,
-              deleteSpeed: 30
+              deleteSpeed: 30,
             }}
           />
-
         </motion.div>
 
         <motion.div
@@ -60,19 +61,22 @@ export default function Hero() {
           transition={{ delay: 1.2 }}
           className="mt-10 flex justify-center gap-6"
         >
-
-          <button className="cursor-pointer px-6 py-3 bg-white text-black hover:bg-gray-300 transition">
+          <button
+            onClick={() => scrollTo("projects")}
+            className="cursor-pointer px-6 py-3 bg-white text-black hover:bg-gray-300 transition"
+          >
             View Projects
           </button>
 
-          <button className="cursor-pointer px-6 py-3 border bg-white border-white hover:bg-gray-300 transition">
+          <button
+            onClick={() => scrollTo("contact")}
+            className="cursor-pointer px-6 py-3 border bg-white border-white hover:bg-gray-300 transition"
+          >
             Contact Me
           </button>
-
         </motion.div>
 
       </div>
-
     </section>
   );
 }
