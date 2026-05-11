@@ -47,6 +47,15 @@ const projects = [
     live: "https://elite-visual-studio.vercel.app",
     number: "05",
   },
+  {
+    title: "ResumeAI",
+    description: "An AI-powered resume builder and optimization tool.",
+    image: "https://i.ibb.co/JR4nY1Tk/resumeai-linkedin.jpg",
+    tech: ["React", "AI", "TypeScript", "Tailwind CSS", "Gemini API"],
+    github: "https://github.com/Daniels-not/resumeai",
+    live: "https://resumeai-delta-ten.vercel.app",
+    number: "05",
+  },
 ];
 
 const fadeUp = (delay = 0) => ({
@@ -77,7 +86,7 @@ export default function Projects() {
         {/* Section label */}
         <motion.div {...fadeUp(0)} className="flex items-center gap-4 mb-6">
           <span style={{
-            color: "var(--color-accent)",
+            color: "",
             fontFamily: "var(--font-body)",
             fontSize: "0.72rem",
             letterSpacing: "0.22em",

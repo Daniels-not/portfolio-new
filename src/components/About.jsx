@@ -4,8 +4,13 @@ import { SiReact, SiTypescript, SiDotnet, SiMysql, SiFirebase } from "react-icon
 
 const handleDownload = () => {
   const link = document.createElement("a");
-  link.href = "https://docs.google.com/document/d/1bfoBKdbFeE0Us4ut3QFpR04PY1ugwSuEsv9ELoFOR7I/edit?usp=sharing";
-  link.download = "https://docs.google.com/document/d/1bfoBKdbFeE0Us4ut3QFpR04PY1ugwSuEsv9ELoFOR7I/edit?usp=sharing";
+
+  // PDF inside public folder
+  link.href = "/RAMY_RESUME.pdf";
+
+  // Name when downloaded
+  link.download = "RAMY_RESUME.pdf";
+
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
