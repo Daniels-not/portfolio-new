@@ -10,8 +10,8 @@ import {
 
 const handleDownload = () => {
   const link = document.createElement("a");
-  link.href = "https://docs.google.com/document/d/1bfoBKdbFeE0Us4ut3QFpR04PY1ugwSuEsv9ELoFOR7I/edit?usp=sharing";
-  link.download = "https://docs.google.com/document/d/1bfoBKdbFeE0Us4ut3QFpR04PY1ugwSuEsv9ELoFOR7I/edit?usp=sharing";
+  link.href = "/RAMY_RESUME.pdf"; 
+  link.download = "RAMY_RESUME.pdf"; 
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
